@@ -18,14 +18,14 @@ Requires:  qt5-plugin-platform-eglfs
 Requires:  qt5-plugin-generic-vboxtouch
 
 Requires:  kernel-adaptation-pc
-Requires:  linux-firmware
-Requires:  installer-shell
+#Requires:  linux-firmware
+#Requires:  installer-shell
 
-Requires:  sensorfw-qt5 >= 0.11.4
+#Requires:  sensorfw-qt5 >= 0.11.4
 
 #provide services for startup user session
-Requires:   systemd-config-mer
-Requires:   nemo-mobile-session-common
+#Requires:   systemd-config-mer
+#Requires:   nemo-mobile-session-common
 
 #provide keyboard
 Requires:   maliit-plugins
