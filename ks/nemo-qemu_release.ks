@@ -36,7 +36,7 @@ lipstick-glacier-home-qt5
 glacier-calc
 glacier-camera
 glacier-contacts
-#glacier-dialer
+glacier-dialer
 glacier-filemuncher
 glacier-gallery
 glacier-music
@@ -44,6 +44,8 @@ glacier-settings
 
 nemo-firstsession
 nemo-mobile-session-wayland
+systemd-config-mer
+nemo-mobile-session-common
 
 #dev packages
 passwd
@@ -52,6 +54,8 @@ setup
 strace
 gdb
 zypper
+connman-tools
+nano
 
 #just for test
 qt5-plugin-platform-eglfs
@@ -60,30 +64,13 @@ qt5-plugin-platform-minimal
 # qt5-plugin-platform-offscreen
 # qtdeclarative-render2d
 
-#PinePhone64 packages
-# mesa-llvmpipe-dri-lima-driver
-# mesa-llvmpipe-dri-swrast-driver
-# mesa-llvmpipe-dri-sun4i-driver
-
 nemo-device-config-virtualbox
-
-#kernel-adaptation-pc
-#linux-firmware
-#installer-shell
 
 virtualbox-guest-tools
 virtualbox-guest-modules
 
-#mesa-dri-swrast-driver
-#mesa-libEGL
-#mesa-libGLESv2
-#mesa-libgbm
-#mesa-libglapi
-
-#qt5-plugin-generic-vboxtouch
-
 openssh-server
-#openssh
+openssh
 
 %end
 %pre
