@@ -59,8 +59,8 @@ nano
 
 #just for test
 qt5-plugin-platform-eglfs
-qt5-plugin-platform-linuxfb
-qt5-plugin-platform-minimal
+# qt5-plugin-platform-linuxfb
+# qt5-plugin-platform-minimal
 # qt5-plugin-platform-offscreen
 # qtdeclarative-render2d
 
