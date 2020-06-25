@@ -1,7 +1,5 @@
 # Nemo Configs for VirtualBox image
 
-WIP - not working, in bootloop and lipstick crashes with segfault.
-
 The current KS is added under ks subfolder and will be removed in future.
 
 To generate image, run
@@ -30,3 +28,20 @@ VBoxManage setextradata "Nemo" GUI/InformationWindowGeometry 338,461,845,466
 ```
 
 After that, start the machine.
+
+# SSH
+
+To connect via SSH, open VirtualBox machine settings, in network settings:
+
+* have only one network adapter enabled
+* set it to NAT (default)
+* adapter to virtio-net
+* in port forwarding, add rule with host ip 127.0.0.1, host port 1122, guest ip blank, guest port 22.
+* save settings
+
+Reboot Nemo vbox and you will be able to connect using
+```
+ssh -p 1122 nemo@localhost 
+```
+
+password should be `nemo` by default.
