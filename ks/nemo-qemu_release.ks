@@ -5,7 +5,7 @@
 
 lang en_US.UTF-8
 keyboard us
-user --name nemo --groups audio,video --password nemo
+user --name nemo --groups audio,video,sailfish-system --password nemo
 timezone --utc UTC
 
 ### Commands from /tmp/sandbox/usr/share/ssu/kickstart/part/default
