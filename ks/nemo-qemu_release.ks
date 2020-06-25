@@ -5,7 +5,7 @@
 
 lang en_US.UTF-8
 keyboard us
-user --name nemo --groups audio,video,sailfish-system --password nemo
+user --name nemo --groups audio,video,users,input,timed,sailfish-system --password nemo
 timezone --utc UTC
 
 ### Commands from /tmp/sandbox/usr/share/ssu/kickstart/part/default
@@ -19,6 +19,7 @@ repo --name=mer-mw --baseurl=http://repo.merproject.org/obs/home:/neochapay:/mer
 repo --name=nemo-ux --baseurl=http://repo.merproject.org/obs/home:/neochapay:/mer:/release:/2020.05:/ux/latest_i486
 repo --name=tools --baseurl=http://repo.merproject.org/obs/home:/neochapay:/mer:/release:/2020.05:/tools/latest_i486
 
+#repo --name=kernel --baseurl=http://repo.merproject.org/obs/nemo:/testing:/hw:/x86:/x86-common/latest_i486/
 repo --name=x86 --baseurl=http://repo.merproject.org/obs/home:/neochapay:/mer:/release:/2020.05:/hardware:/x86/latest_i486
 repo --name=x86-tmp --baseurl=http://repo.merproject.org/obs/home:/rinigus:/sandbox-x86/latest_i486/
 
@@ -26,10 +27,6 @@ repo --name=x86-tmp --baseurl=http://repo.merproject.org/obs/home:/rinigus:/sand
 #if you have modules
 module-init-tools
 procps
-
-#this packages must be added into requires
-qt5-qtfeedback #BUG glacier-home #91
-kf5bluezqt-bluez5-declarative #BUG glacier-serrings #16
 
 #master packages
 lipstick-glacier-home-qt5
@@ -44,8 +41,6 @@ glacier-settings
 
 nemo-firstsession
 nemo-mobile-session-wayland
-systemd-config-mer
-nemo-mobile-session-common
 
 #dev packages
 passwd
@@ -54,16 +49,25 @@ setup
 strace
 gdb
 zypper
+nemo-developer-mode
 connman-tools
 nano
 
 #just for test
 qt5-plugin-platform-eglfs
-# qt5-plugin-platform-linuxfb
-# qt5-plugin-platform-minimal
-# qt5-plugin-platform-offscreen
-# qtdeclarative-render2d
+qt5-plugin-platform-minimal
 
+kernel-adaptation-pc
+#linux-firmware
+#installer-shell
+
+mesa-dri-swrast-driver
+mesa-libEGL
+mesa-libGLESv2
+mesa-libgbm
+mesa-libglapi
+
+# virtualbox specific
 nemo-device-config-virtualbox
 
 virtualbox-guest-tools
