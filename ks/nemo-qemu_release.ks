@@ -21,6 +21,8 @@ repo --name=tools --baseurl=http://repo.merproject.org/obs/home:/neochapay:/mer:
 
 #repo --name=kernel --baseurl=http://repo.merproject.org/obs/nemo:/testing:/hw:/x86:/x86-common/latest_i486/
 repo --name=x86 --baseurl=http://repo.merproject.org/obs/home:/neochapay:/mer:/release:/2020.05:/hardware:/x86/latest_i486
+
+# replace with the correct one
 repo --name=x86-tmp --baseurl=http://repo.merproject.org/obs/home:/rinigus:/sandbox-x86/latest_i486/
 
 %packages
@@ -42,6 +44,8 @@ glacier-settings
 nemo-firstsession
 nemo-mobile-session-wayland
 
+qt5-plugin-platform-minimal
+
 #dev packages
 passwd
 vim
@@ -53,25 +57,8 @@ nemo-developer-mode
 connman-tools
 nano
 
-#just for test
-qt5-plugin-platform-eglfs
-qt5-plugin-platform-minimal
-
-kernel-adaptation-pc
-#linux-firmware
-#installer-shell
-
-mesa-dri-swrast-driver
-mesa-libEGL
-mesa-libGLESv2
-mesa-libgbm
-mesa-libglapi
-
 # virtualbox specific
 nemo-device-config-virtualbox
-
-virtualbox-guest-tools
-virtualbox-guest-modules
 
 openssh-server
 openssh
