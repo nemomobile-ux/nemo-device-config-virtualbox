@@ -8,21 +8,6 @@ License:    MIT
 URL:        https://github.com/rinigus/nemo-device-config-virtualbox
 Source0:    %{name}-%{version}.tar.bz2
 
-Requires:  mesa-dri-swrast-driver
-Requires:  mesa-libEGL
-Requires:  mesa-libGLESv2
-Requires:  mesa-libgbm
-Requires:  mesa-libglapi
-
-Requires:  qt5-plugin-platform-eglfs
-Requires:  qt5-plugin-generic-vboxtouch
-
-Requires:  kernel-adaptation-pc
-
-Requires:  virtualbox-guest-tools virtualbox-guest-modules
-
-# WiFi/BT regulator DB
-
 %description
 This package contains the config files for
 VirtualBox.
