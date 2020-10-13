@@ -11,11 +11,16 @@ test -f /.profile && . /.profile
 echo "Configure image: [$kiwi_iname]..."
 
 #======================================
-# Activate services
+# Handle services
 #--------------------------------------
-baseInsertService network
+
+# disable NetworkManager which installed by default
+baseRemoveService NetworkManager
+
+# enable connman
+baseInsertService connman
 
 #======================================
 # Setup default target, multi-user
 #--------------------------------------
-baseSetRunlevel 3
+#baseSetRunlevel 3
