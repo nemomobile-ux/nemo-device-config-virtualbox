@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- OBS-Profiles: Virtual -->
+
 <image schemaversion="6.8" name="Nemo-32.0_appliance">
   <description type="system">
     <author>Rinigus</author>
