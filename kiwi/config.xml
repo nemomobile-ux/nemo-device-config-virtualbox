@@ -47,34 +47,35 @@
   </preferences>  
   
   <users>
+    <user name="root" home="/root" password="nemo-root" pwdformat="plain" />
     <user name="nemo" home="/home/nemo" groups="nemo,video,input,wheel" password="nemo" pwdformat="plain" />
   </users>
   
   <repository type="rpm-md" alias="Fedora32" sourcetype="metalink">
     <source path="https://mirrors.fedoraproject.org/metalink?repo=fedora-32&amp;arch=x86_64"/>
   </repository>
-  <repository type="rpm-md" alias="Fedora32-updates" sourcetype="metalink">
-    <source path="https://mirrors.fedoraproject.org/metalink?repo=updates-released-f32&amp;arch=x86_64"/>
-  </repository>
+  <!-- <repository type="rpm-md" alias="Fedora32-updates" sourcetype="metalink"> -->
+  <!--   <source path="https://mirrors.fedoraproject.org/metalink?repo=updates-released-f32&amp;arch=x86_64"/> -->
+  <!-- </repository> -->
   <repository type="rpm-md" priority="1" alias="kiwi-common-boot">
     <source path="obs://Virtualization:Appliances:Builder/Fedora_32"/>
   </repository>
 
-  <!-- <repository type="rpm-md" priority="10" alias="nemo_core_32"> -->
-  <!--   <source path="obs://home:neochapay:nemo:core/Fedora_32"/> -->
-  <!-- </repository> -->
-  <!-- <repository type="rpm-md" priority="10" alias="nemo_mw_32"> -->
-  <!--   <source path="obs://home:neochapay:nemo:mw/Fedora_32"/> -->
-  <!-- </repository> -->
-  <!-- <repository type="rpm-md" priority="10" alias="nemo_ux_32"> -->
-  <!--   <source path="obs://home:neochapay:nemo:ux/Fedora_32"/> -->
-  <!-- </repository> -->
-  <!-- <repository type="rpm-md" priority="10" alias="nemo_qt_32"> -->
-  <!--   <source path="obs://home:neochapay:nemo:qt/Fedora_32"/> -->
-  <!-- </repository> -->
-  <!-- <repository type="rpm-md" priority="10" alias="nemo_vbox_32"> -->
-  <!--   <source path="obs://home:neochapay:nemo:hw:vbox/Fedora_32"/> -->
-  <!-- </repository> -->
+  <repository type="rpm-md" priority="10" alias="Nemo-core-32" imageinclude="true" repository_gpgcheck="false">
+    <source path="obs://home:neochapay:nemo:core/Fedora_32"/>
+  </repository>
+  <repository type="rpm-md" priority="10" alias="Nemo-mw-32" imageinclude="true" repository_gpgcheck="false">
+    <source path="obs://home:neochapay:nemo:mw/Fedora_32"/>
+  </repository>
+  <repository type="rpm-md" priority="10" alias="Nemo-ux-32" imageinclude="true" repository_gpgcheck="false">
+    <source path="obs://home:neochapay:nemo:ux/Fedora_32"/>
+  </repository>
+  <repository type="rpm-md" priority="10" alias="Nemo-qt-32" imageinclude="true" repository_gpgcheck="false">
+    <source path="obs://home:neochapay:nemo:qt/Fedora_32"/>
+  </repository>
+  <repository type="rpm-md" priority="10" alias="Nemo-vbox-32" imageinclude="true" repository_gpgcheck="false">
+    <source path="obs://home:neochapay:nemo:hw:vbox/Fedora_32"/>
+  </repository>
   
   <packages type="image">
     <namedCollection name="core"/>
@@ -82,21 +83,30 @@
     <package name="grub2"/>
     <package name="kernel"/>
         
-    <!-- <package name="lipstick-glacier-home-qt5"/> -->
-    <!-- <package name="glacier-settings"/> -->
-    <!-- <package name="glacier-calc"/> -->
-    <!-- <package name="nemo-firstsession"/> -->
-    <!-- <package name="nemo-mobile-session-wayland"/> -->
-    <!-- <package name="nemo-developer-mode"/> -->
-    <!-- <package name="nemo-device-config-virtualbox"/> -->
-    <!-- <package name="nemo-device-config-virtualbox"/> -->
-    <!-- <package name="qt5-plugin-generic-vboxtouch"/> -->
+    <package name="nemo-firstsession"/>
+    <package name="nemo-mobile-session-wayland"/>
+    <package name="lipstick-glacier-home-qt5"/>
+    <package name="glacier-calc"/>
+    <package name="systemd-user-session-targets"/>
     
-    <package name="virtualbox-guest-additions"/>
+    <!-- <package name="glacier-camera"/> -->
+    <!-- <package name="glacier-contacts"/> -->
+    <!-- <package name="glacier-dialer"/> -->
+    <!-- <package name="glacier-filemuncher"/> -->
+    <!-- <package name="glacier-gallery"/> -->
+    <!-- <package name="glacier-music"/> -->
+
+    <package name="glacier-settings"/>
+    <package name="nemo-developer-mode"/>
 
     <package name="connman"/>
     <package name="nano"/>
     <package name="mc"/>
+
+    <package name="nemo-device-config-virtualbox"/>
+    <package name="qt5-plugin-generic-vboxtouch"/>
+    <package name="virtualbox-guest-additions"/>
+    <package name="mesa-dri-drivers"/>
   </packages>
   
   <packages type="oem" profiles="Virtual">
@@ -106,5 +116,6 @@
   <packages type="bootstrap">
     <package name="filesystem"/>
     <package name="basesystem"/>
+    <package name="nemo-scripts"/>
   </packages>
 </image>
